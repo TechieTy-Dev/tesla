@@ -1,26 +1,59 @@
-html,
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  font-size: 62.5%;
+}
+html, body{
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
 }
 
-a {
-  color: inherit;
+a{
   text-decoration: none;
 }
 
-* {
+*{
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.nav_links{
+  @apply text-2xl font-semibold text-[#181b21] mx-[0.8rem] px-[0.8rem] py-[0.4rem] rounded-[0.8rem] bg-transparent hover:bg-[#181b21] hover:bg-opacity-10 transition-all duration-300;
+}
+
+.car_section{
+  @apply w-full h-full;
+}
+
+.car_img{
+  @apply object-cover w-full h-full;
+}
+
+.car_details{
+  @apply absolute top-[20%] left-[50%] text-center;
+}
+.transform_50{
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.car_buttons{
+  @apply absolute top-[95%] left-[50%];
+}
+
+.btn{
+  @apply text-2xl text-white bg-[#131a20] font-medium uppercase my-2 py-[0.4rem] px-[2.4rem] rounded-[3.2rem] w-[25.5rem] h-16 bg-opacity-80;
+}
+
+.inventory{
+  @apply text-[#202020] bg-white bg-opacity-40 ml-8;
+}
+
+.down_arrow{
+  @apply block w-full h-20 mx-auto absolute top-[93%] animate-bounce;
 }
